@@ -1,4 +1,4 @@
-package serverA.controller;
+package com.example.serverA.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -12,10 +12,71 @@
         <module>serverA</module>
         <module>serverB</module>
     </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.10.BUILD-SNAPSHOT</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <java.version>1.8</java.version>
     </properties>
+
+    <dependencies>
+        <!-- tomcat,mvc -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.2.10.BUILD-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- nacos配置 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <version>2.2.1.RELEASE</version>
+        </dependency>
+
+        <!-- nacos注册发现 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>2.2.1.RELEASE</version>
+            <!--			<exclusions>-->
+            <!--				&lt;!&ndash; 将ribbon排除 &ndash;&gt;-->
+            <!--				<exclusion>-->
+            <!--					<groupId>org.springframework.cloud</groupId>-->
+            <!--					<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
+            <!--				</exclusion>-->
+            <!--			</exclusions>-->
+        </dependency>
+
+        <!--		&lt;!&ndash;新版Nacos discovery移除了Ribbon所以用loadbalancer替代&ndash;&gt;-->
+        <!--		<dependency>-->
+        <!--			<groupId>org.springframework.cloud</groupId>-->
+        <!--			<artifactId>spring-cloud-starter-loadbalancer</artifactId>-->
+        <!--			<version>3.1.6</version>-->
+        <!--		</dependency>-->
+
+        <!--feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>2.2.1.RELEASE</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -1,4 +1,4 @@
-package serverB;
+package com.example.serverA;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ServerB {
+public class ServerA {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ServerB.class, args);
+		SpringApplication.run(ServerA.class, args);
 	}
 
 }

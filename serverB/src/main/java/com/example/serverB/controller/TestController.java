@@ -1,4 +1,4 @@
-package serverB.controller;
+package com.example.serverB.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.example.serverB.feign.TestFeignB;

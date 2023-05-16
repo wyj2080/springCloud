@@ -1,4 +1,4 @@
-package serverB.feign;
+package com.example.serverB.feign;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.cloud.openfeign.FeignClient;
