@@ -70,6 +70,7 @@
 
     </dependencies>
 
+    <!--maven打包插件-->
     <build>
         <plugins>
             <plugin>
