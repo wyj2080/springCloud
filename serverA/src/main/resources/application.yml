@@ -1,0 +1,28 @@
+mybatis:
+  mapperLocations: classpath:mapper/*:xml
+spring:
+  application:
+    name: serverA
+  datasource:
+    url: jdbc:mysql://ip:3306/p2p?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+    username: root
+    password: mima
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    #druid配置
+#    druid:
+#      initial-size: 8 #初始化连接
+#      max-active: 16 #池中最大连接数，包括闲置和使用中的连接
+#      min-idle: 8 #池中维护的最小空闲连接数
+#      max-wait: 6000 #等待池中对象，设置1好像也不报错
+#      filters: wall #防止sql注入，待测试
+  config:
+    import: nacos:serverA.yml
+  cloud:
+    nacos:
+      config:
+        group: DEFAULT_GROUP
+        server-addr: ip:8848
+      discovery:
+        server-addr: ip:8848
+      username: nacos
+      password: mima

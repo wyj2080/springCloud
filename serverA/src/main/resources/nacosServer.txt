@@ -1,0 +1,10 @@
+nacos上配置示例
+
+Data ID serverA.yml
+配置格式选yaml
+
+server:
+  port: 8081
+logging:
+  level:
+    com.alibaba.nacos.client.config.impl: WARN
