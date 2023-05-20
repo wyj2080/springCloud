@@ -16,7 +16,7 @@ spring:
 #      max-wait: 6000 #等待池中对象，设置1好像也不报错
 #      filters: wall #防止sql注入，待测试
   config:
-    import: nacos:serverA.yml
+    import: nacos:serverB.yml
   cloud:
     nacos:
       config:
